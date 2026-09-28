@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>استبيان تأثير وسائل التواصل الاجتماعي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        /* تنسيق العناوين القسمية */
+        .section-title {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .question {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        p {
+            font-weight: bold;
+            color: #333;
+        }
+        label {
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        /* تنسيق حقول البيانات الشخصية */
+        .personal-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            border: 1px solid #e9ecef;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        .input-group input[type="text"],
+        .input-group input[type="number"],
+        .input-group input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>استبيان قياس مدى تأثير وسائل التواصل الاجتماعي</h2>
+    
+    <form action="https://formspree.io/f/mnpnlpze="POST">
+
+        <!-- القسم الأول: البيانات الشخصية -->
+        <h3 class="section-title">أولاً: البيانات الشخصية</h3>
+        <div class="personal-info">
+            <div class="input-group">
+                <label for="user_name">الاسم الثلاثي:</label>
+                <input type="text" id="user_name" name="الاسم" placeholder="أدخل اسمك هنا" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="user_age">السن (العمر):</label>
+                <input type="number" id="user_age" name="السن" min="10" max="100" placeholder="أدخل عمرك" required>
+            </div>
+
+            <div class="input-group">
+                <label for="user_email">البريد الإلكتروني:</label>
+                <input type="email" id="user_email" name="البريد الإلكتروني" placeholder="example@mail.com" required>
+            </div>
+        </div>
+
+        <!-- القسم الثاني: أسئلة نعم / لا -->
+        <h3 class="section-title">ثانياً: أسئلة نعم أم لا</h3>
+
+        <div class="question">
+            <p>1. هل تقضي أكثر من 3 ساعات يومياً على وسائل التواصل الاجتماعي؟</p>
+            <input type="radio" id="q1_a" name="1. هل تقضي أكثر من 3 ساعات يومياً؟" value="نعم" required><label for="q1_a">نعم</label>
+            <input type="radio" id="q1_b" name="1. هل تقضي أكثر من 3 ساعات يومياً؟" value="لا"><label for="q1_b">لا</label>
+        </div>
+
+        <div class="question">
+            <p>2. هل تتفقد هاتفك فور استيقاظك من النوم مباشرة؟</p>
+            <input type="radio" id="q2_a" name="2. هل تتفقد هاتفك فور استيقاظك؟" value="نعم" required><label for="q2_a">نعم</label>
+            <input type="radio" id="q2_b" name="2. هل تتفقد هاتفك فور استيقاظك؟" value="لا"><label for="q2_b">لا</label>
+        </div>
+
+        <div class="question">
+            <p>3. هل تتابع صفحات أو صناع محتوى يساهمون في تطوير مهاراتك؟</p>
+            <input type="radio" id="q3_a" name="3. هل تتابع محتوى تطويري؟" value="نعم" required><label for="q3_a">نعم</label>
+            <input type="radio" id="q3_b" name="3. هل تتابع محتوى تطويري؟" value="لا"><label for="q3_b">لا</label>
+        </div>
+
+        <div class="question">
+            <p>4. هل تشعر بالقلق أو التوتر إذا ابتعدت عن الإنترنت لفترة؟</p>
+            <input type="radio" id="q4_a" name="4. هل تشعر بالقلق عند الابتعاد عن الإنترنت؟" value="نعم" required><label for="q4_a">نعم</label>
+            <input type="radio" id="q4_b" name="4. هل تشعر بالقلق عند الابتعاد عن الإنترنت؟" value="لا"><label for="q4_b">لا</label>
+        </div>
+
+        <div class="question">
+            <p>5. هل تؤثر إعلانات المنصات على قراراتك الشرائية؟</p>
+            <input type="radio" id="q5_a" name="5. هل تؤثر الإعلانات على القرارات الشرائية؟" value="نعم" required><label for="q5_a">نعم</label>
+            <input type="radio" id="q5_b" name="5. هل تؤثر الإعلانات على القرارات الشرائية؟" value="لا"><label for="q5_b">لا</label>
+        </div>
+
+        <div class="question">
+            <p>6. هل تعرضت أو شهدت مضايقات/تنمر إلكتروني سابقاً؟</p>
+            <input type="radio" id="q6_a" name="6. هل شهدت تنمراً إلكترونياً؟" value="نعم" required><label for="q6_a">نعم</label>
+            <input type="radio" id="q6_b" name="6. هل شهدت تنمراً إلكترونياً؟" value="لا"><label for="q6_b">لا</label>
+        </div>
+
+        <div class="question">
+            <p>7. هل حاولت من قبل تقليل ساعات استخدامك ونجحت؟</p>
+            <input type="radio" id="q7_a" name="7. هل نجحت في تقليل ساعات الاستخدام؟" value="نعم" required><label for="q7_a">نعم</label>
+            <input type="radio" id="q7_b" name="7. هل نجحت في تقليل ساعات الاستخدام؟" value="لا"><label for="q7_b">لا</label>
+        </div>
+
+        <!-- القسم الثالث: أسئلة صح / خطأ -->
+        <h3 class="section-title">ثالثاً: أسئلة صح أم خطأ</h3>
+
+        <div class="question">
+            <p>8. تصفح وسائل التواصل قبل النوم يؤثر سلباً على جودة نومي.</p>
+            <input type="radio" id="q8_a" name="8. يؤثر التصفح قبل النوم على جودة النوم" value="صح" required><label for="q8_a">صح</label>
+            <input type="radio" id="q8_b" name="8. يؤثر التصفح قبل النوم على جودة النوم" value="خطأ"><label for="q8_b">خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>9. تساعدني منصات التواصل في تقوية علاقاتي مع أصدقائي وعائلتي.</p>
+            <input type="radio" id="q9_a" name="9. تقوية العلاقات مع الأصدقاء والعائلة" value="صح" required><label for="q9_a">صح</label>
+            <input type="radio" id="q9_b" name="9. تقوية العلاقات مع الأصدقاء والعائلة" value="خطأ"><label for="q9_b">خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>10. أعتمد على وسائل التواصل كمصدر أساسي لمعرفة الأخبار اليومية.</p>
+            <input type="radio" id="q10_a" name="10. مصدر أساسي للأخبار" value="صح" required><label for="q10_a">صح</label>
+            <input type="radio" id="q10_b" name="10. مصدر أساسي للأخبار" value="خطأ"><label for="q10_b">خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>11. يقل تركيزي أثناء العمل أو الدراسة بسبب الإشعارات والتنبيهات.</p>
+            <input type="radio" id="q11_a" name="11. يقل التركيز بسبب الإشعارات" value="صح" required><label for="q11_a">صح</label>
+            <input type="radio" id="q11_b" name="11. يقل التركيز بسبب الإشعارات" value="خطأ"><label for="q11_b">خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>12. أتردد في التعبير عن رأيي الشخصي خوفاً من الانتقاد السلبي.</p>
+            <input type="radio" id="q12_a" name="12. التردد في التعبير عن الرأي" value="صح" required><label for="q12_a">صح</label>
+            <input type="radio" id="q12_b" name="12. التردد في التعبير عن الرأي" value="خطأ"><label for="q12_b">خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>13. أشعر بالرضا عن حياتي عند مقارنتها بمنشورات الآخرين.</p>
+            <input type="radio" id="q13_a" name="13. الشعور بالرضا عند المقارنة" value="صح" required><label for="q13_a">صح</label>
+            <input type="radio" id="q13_b" name="13. الشعور بالرضا عند المقارنة" value="خطأ"><label for="q13_b">خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>14. أجد صعوبة في أداء مهمة واحدة دون فتح تطبيقات التواصل.</p>
+            <input type="radio" id="q14_a" name="14. صعوبة التركيز في مهمة واحدة" value="صح" required><label for="q14_a">صح</label>
+            <input type="radio" id="q14_b" name="14. صعوبة التركيز في مهمة واحدة" value="خطأ"><label for="q14_b">خطأ</label>
+        </div>
+
+        <!-- القسم الرابع: أسئلة اختيارات متعددة -->
+        <h3 class="section-title">رابعاً: أسئلة الاختيار من متعدد</h3>
+
+        <div class="question">
+            <p>15. التأثير العام لوسائل التواصل الاجتماعي على حياتك يُعتبر:</p>
+            <input type="radio" id="q15_a" name="15. التأثير العام" value="إيجابي" required><label for="q15_a">إيجابي</label>
+            <input type="radio" id="q15_b" name="15. التأثير العام" value="سلبي"><label for="q15_b">سلبي</label>
+        </div>
+
+        <div class="question">
+            <p>16. الهدف الأكبر من استخدامك للمنصات هو:</p>
+            <input type="radio" id="q16_a" name="16. الهدف الأكبر" value="التسلية والترفيه" required><label for="q16_a">التسلية والترفيه</label>
+            <input type="radio" id="q16_b" name="16. الهدف الأكبر" value="التعلم والعمل"><label for="q16_b">التعلم والعمل</label>
+        </div>
+
+        <div class="question">
+            <p>17. الوقت الأكثر استخداماً للمنصات لديك يكون:</p>
+            <input type="radio" id="q17_a" name="17. وقت الاستخدام الأكبر" value="خلال النهار" required><label for="q17_a">خلال النهار</label>
+            <input type="radio" id="q17_b" name="17. وقت الاستخدام الأكبر" value="في المساء والليل"><label for="q17_b">في المساء والليل</label>
+        </div>
+
+        <div class="question">
+            <p>18. وجود منصات التواصل يجعلك تشعر بـ:</p>
+            <input type="radio" id="q18_a" name="18. شعور الاستخدام" value="التواصل والترابط" required><label for="q18_a">التواصل والترابط</label>
+            <input type="radio" id="q18_b" name="18. شعور الاستخدام" value="العزلة والانفصال"><label for="q18_b">العزلة والانفصال</label>
+        </div>
+
+        <div class="question">
+            <p>19. عند وجودك في تجمع عائلي أو مع الأصدقاء، تقوم بـ:</p>
+            <input type="radio" id="q19_a" name="19. التصرف في التجمعات" value="ترك الهاتف جانباً" required><label for="q19_a">ترك الهاتف جانباً</label>
+            <input type="radio" id="q19_b" name="19. التصرف في التجمعات" value="تصفح الهاتف"><label for="q19_b">تصفح الهاتف</label>
+        </div>
+
+        <div class="question">
+            <p>20. هل ترى أن الشبكات الاجتماعية توفر فرصاً حقيقية للنجاح؟</p>
+            <input type="radio" id="q20_a" name="20. توفير فرص للنجاح" value="نعم بشكل كبير" required><label for="q20_a">نعم بشكل كبير</label>
+            <input type="radio" id="q20_b" name="20. توفير فرص للنجاح" value="نادراً وبشكل محدود"><label for="q20_b">نادراً وبشكل محدود</label>
+        </div>
+
+        <br>
+        <button type="submit">إرسال الاستجابات</button>
+    </form>
+</div>
+
+</body>
+</html>
